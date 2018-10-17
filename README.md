@@ -12,7 +12,7 @@ This plugin allows you to stream audio and video in a fullscreen, native player 
 ## Installation
 
 ```
-cordova plugin add cordova-plugin-streaming-media-xtreme
+cordova plugin add https://github.com/joaoduartemariucio/cordova-plugin-streaming-native.git
 ```
 
 ### iOS specifics
