@@ -1,9 +1,8 @@
-package com.smccamley.cordova.plugins.streamingmedia;
+package br.com.joaoduartemariucio.cordova.plugins.streamingnative;
 
 import android.app.Activity;
 import android.content.res.Configuration;
 import android.graphics.Color;
-import android.graphics.Point;
 import android.media.MediaPlayer;
 import android.widget.MediaController;
 import android.content.Intent;
@@ -12,26 +11,30 @@ import android.view.MotionEvent;
 import android.net.Uri;
 import android.os.Bundle;
 import android.util.Log;
-import android.view.Display;
 import android.view.View;
 import android.view.Window;
 import android.view.WindowManager;
-import android.widget.MediaController;
 import android.widget.ProgressBar;
 import android.widget.RelativeLayout;
 import android.widget.VideoView;
 
-public class SimpleVideoStream extends Activity implements
+import org.json.JSONArray;
+import org.json.JSONException;
+
+public class VideoStream extends Activity implements
 	MediaPlayer.OnCompletionListener, MediaPlayer.OnPreparedListener,
 	MediaPlayer.OnErrorListener, MediaPlayer.OnBufferingUpdateListener {
+
 	private String TAG = getClass().getSimpleName();
 	private VideoView mVideoView = null;
 	private MediaPlayer mMediaPlayer = null;
 	private MediaController mMediaController = null;
 	private ProgressBar mProgressBar = null;
-	private String mVideoUrl;
-	private Boolean mShouldAutoClose = true;
+	private JSONArray mVideoUrl;
 	private boolean mControls;
+	private int videoCurrent = 0;
+	private boolean playlist = false;
+	private Bundle b = null;
 
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
@@ -39,16 +42,22 @@ public class SimpleVideoStream extends Activity implements
 		this.requestWindowFeature(Window.FEATURE_NO_TITLE);
 		this.getWindow().setFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN, WindowManager.LayoutParams.FLAG_FULLSCREEN);
 
-		Bundle b = getIntent().getExtras();
-		mVideoUrl = b.getString("mediaUrl");
-		mShouldAutoClose = b.getBoolean("shouldAutoClose");
-		mShouldAutoClose = mShouldAutoClose == null ? true : mShouldAutoClose;
+		 b = getIntent().getExtras();
+
+		try {
+			mVideoUrl = new JSONArray(b.getString("mediaUrl"));
+			playlist = true;
+		} catch (JSONException e) {
+			Log.e(TAG," "+e);
+		}
+
 		mControls = b.getBoolean("controls", true);
 
 		RelativeLayout relLayout = new RelativeLayout(this);
 		relLayout.setBackgroundColor(Color.BLACK);
 		RelativeLayout.LayoutParams relLayoutParam = new RelativeLayout.LayoutParams(RelativeLayout.LayoutParams.MATCH_PARENT, RelativeLayout.LayoutParams.MATCH_PARENT);
 		relLayoutParam.addRule(RelativeLayout.CENTER_IN_PARENT, RelativeLayout.TRUE);
+
 		mVideoView = new VideoView(this);
 		mVideoView.setLayoutParams(relLayoutParam);
 		relLayout.addView(mVideoView);
@@ -68,12 +77,18 @@ public class SimpleVideoStream extends Activity implements
 
 		setContentView(relLayout, relLayoutParam);
 
-		play();
+		play(videoCurrent);
 	}
 
-	private void play() {
+	private void play(int index) {
+
 		mProgressBar.setVisibility(View.VISIBLE);
-		Uri videoUri = Uri.parse(mVideoUrl);
+		Uri videoUri;
+		if(playlist){
+			videoUri = returnVideoUrl(index);
+		}else{
+			videoUri = Uri.parse(b.getString("mediaUrl"));
+		}
 		try {
 			mVideoView.setOnCompletionListener(this);
 			mVideoView.setOnPreparedListener(this);
@@ -91,6 +106,14 @@ public class SimpleVideoStream extends Activity implements
 		}
 	}
 
+	private Uri returnVideoUrl(int index){
+		try {
+			return  Uri.parse(mVideoUrl.getString(index));
+		} catch (JSONException e) {
+			return null;
+		}
+	}
+
 	private void setOrientation(String orientation) {
 		if ("landscape".equals(orientation)) {
 			this.setRequestedOrientation(ActivityInfo.SCREEN_ORIENTATION_LANDSCAPE);
@@ -103,12 +126,8 @@ public class SimpleVideoStream extends Activity implements
 		@Override
 		public void run() {
 			if (mVideoView.getCurrentPosition() > 0) {
-				// Video is not at the very beginning anymore.
-				// Hide the progress bar.
 				mProgressBar.setVisibility(View.GONE);
 			} else {
-				// Video is still at the very beginning.
-				// Check again after a small amount of time.
 				mVideoView.postDelayed(checkIfPlaying, 100);
 			}
 		}
@@ -149,7 +168,15 @@ public class SimpleVideoStream extends Activity implements
 
 	public void onCompletion(MediaPlayer mp) {
 		stop();
-		if (mShouldAutoClose) {
+		if(playlist) {
+			if (videoCurrent > mVideoUrl.length()) {
+				wrapItUp(RESULT_OK, null);
+			} else {
+				videoCurrent++;
+				play(videoCurrent);
+			}
+		}
+		else {
 			wrapItUp(RESULT_OK, null);
 		}
 	}

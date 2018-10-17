@@ -19,7 +19,7 @@
 
 	<repo>https://github.com/joaoduartemariucio/cordova-plugin-streaming-native.git</repo>
 
-	<issue>https://github.com/smccamley/cordova-plugin-streaming-native/issues</issue>
+	<issue>https://github.com/joaoduartemariucio/cordova-plugin-streaming-native/issues</issue>
 
 	<engines>
 		<engine name="cordova" version=">=3.0.0" />
@@ -43,38 +43,38 @@
 	<platform name="android">
 		<config-file target="res/xml/config.xml" parent="/*">
 			<feature name="StreamingMedia">
-				<param name="android-package" value="com.smccamley.cordova.plugins.streamingmedia.StreamingMedia" />
+				<param name="android-package" value="br.com.joaoduartemariucio.cordova.plugins.streamingnative.StreamingMedia" />
 			</feature>
 		</config-file>
 		<config-file target="AndroidManifest.xml" parent="/manifest">
 			<uses-permission android:name="android.permission.INTERNET" />
 		</config-file>
 		<config-file target="AndroidManifest.xml" parent="/manifest/application">
-			<activity android:configChanges="orientation|screenSize" android:name="com.smccamley.cordova.plugins.streamingmedia.SimpleAudioStream" android:label="Simple Audio Stream"></activity>
-			<activity android:configChanges="orientation|screenSize" android:name="com.smccamley.cordova.plugins.streamingmedia.SimpleVideoStream" android:label="Simple Video Stream"></activity>
+			<activity android:configChanges="orientation|screenSize" android:name="br.com.joaoduartemariucio.cordova.plugins.streamingnative.AudioStream" android:label="Audio Stream"></activity>
+			<activity android:configChanges="orientation|screenSize" android:name="br.com.joaoduartemariucio.cordova.plugins.streamingnative.VideoStream" android:label="Video Stream"></activity>
 		</config-file>
-		<source-file src="src/android/com/smccamley/cordova/plugins/streamingmedia/SimpleAudioStream.java" target-dir="src/com/smccamley/cordova/plugins/streamingmedia" />
-		<source-file src="src/android/com/smccamley/cordova/plugins/streamingmedia/SimpleVideoStream.java" target-dir="src/com/smccamley/cordova/plugins/streamingmedia" />
-		<source-file src="src/android/com/smccamley/cordova/plugins/streamingmedia/StreamingMedia.java" target-dir="src/com/smccamley/cordova/plugins/streamingmedia" />
-		<source-file src="src/android/com/smccamley/cordova/plugins/streamingmedia/ImageLoadTask.java" target-dir="src/com/smccamley/cordova/plugins/streamingmedia" />
+		<source-file src="src/android/br/com/joaoduartemariucio/cordova/plugins/streamingnative/AudioStream.java" target-dir="src/br/com/joaoduartemariucio/cordova/plugins/streamingnative" />
+		<source-file src="src/android/br/com/joaoduartemariucio/cordova/plugins/streamingnative/VideoStream.java" target-dir="src/br/com/joaoduartemariucio/cordova/plugins/streamingnative" />
+		<source-file src="src/android/br/com/joaoduartemariucio/cordova/plugins/streamingnative/StreamingMedia.java" target-dir="src/br/com/joaoduartemariucio/cordova/plugins/streamingnative" />
+		<source-file src="src/android/br/com/joaoduartemariucio/cordova/plugins/streamingnative/ImageLoadTask.java" target-dir="src/br/com/joaoduartemariucio/cordova/plugins/streamingnative" />
 	</platform>
 
 	<platform name="amazon-fireos">
 		<config-file target="res/xml/config.xml" parent="/*">
 			<feature name="StreamingMedia">
-				<param name="android-package" value="com.smccamley.cordova.plugins.streamingmedia.StreamingMedia" />
+				<param name="android-package" value="br.com.joaoduartemariucio.cordova.plugins.streamingnative.StreamingMedia" />
 			</feature>
 		</config-file>
 		<config-file target="AndroidManifest.xml" parent="/manifest">
 			<uses-permission android:name="android.permission.INTERNET" />
 		</config-file>
 		<config-file target="AndroidManifest.xml" parent="/manifest/application">
-			<activity android:configChanges="orientation|screenSize" android:name="com.smccamley.cordova.plugins.streamingmedia.SimpleAudioStream" android:label="Simple Audio Stream"></activity>
-			<activity android:configChanges="orientation|screenSize" android:name="com.smccamley.cordova.plugins.streamingmedia.SimpleVideoStream" android:label="Simple Video Stream"></activity>
+			<activity android:configChanges="orientation|screenSize" android:name="br.com.joaoduartemariucio.cordova.plugins.streamingnative.AudioStream" android:label="Audio Stream"></activity>
+			<activity android:configChanges="orientation|screenSize" android:name="br.com.joaoduartemariucio.cordova.plugins.streamingnative.VideoStream" android:label="Video Stream"></activity>
 		</config-file>
-		<source-file src="src/android/com/smccamley/cordova/plugins/streamingmedia/SimpleAudioStream.java" target-dir="src/com/smccamley/cordova/plugins/streamingmedia" />
-		<source-file src="src/android/com/smccamley/cordova/plugins/streamingmedia/SimpleVideoStream.java" target-dir="src/com/smccamley/cordova/plugins/streamingmedia" />
-		<source-file src="src/android/com/smccamley/cordova/plugins/streamingmedia/StreamingMedia.java" target-dir="src/com/smccamley/cordova/plugins/streamingmedia" />
-		<source-file src="src/android/com/smccamley/cordova/plugins/streamingmedia/ImageLoadTask.java" target-dir="src/com/smccamley/cordova/plugins/streamingmedia" />
+		<source-file src="src/android/br/com/joaoduartemariucio/cordova/plugins/streamingnative/AudioStream.java" target-dir="src/br/com/joaoduartemariucio/cordova/plugins/streamingnative" />
+		<source-file src="src/android/br/com/joaoduartemariucio/cordova/plugins/streamingnative/VideoStream.java" target-dir="src/br/com/joaoduartemariucio/cordova/plugins/streamingnative" />
+		<source-file src="src/android/br/com/joaoduartemariucio/cordova/plugins/streamingnative/StreamingMedia.java" target-dir="src/br/com/joaoduartemariucio/cordova/plugins/streamingnative" />
+		<source-file src="src/android/br/com/joaoduartemariucio/cordova/plugins/streamingnative/ImageLoadTask.java" target-dir="src/br/com/joaoduartemariucio/cordova/plugins/streamingnative" />
 	</platform>
 </plugin>

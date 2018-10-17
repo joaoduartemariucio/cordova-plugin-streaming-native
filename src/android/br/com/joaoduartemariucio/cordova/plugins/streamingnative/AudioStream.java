@@ -1,4 +1,4 @@
-package com.smccamley.cordova.plugins.streamingmedia;
+package br.com.joaoduartemariucio.cordova.plugins.streamingnative;
 
 import android.app.Activity;
 import android.content.res.Configuration;
@@ -17,7 +17,7 @@ import android.widget.LinearLayout;
 import android.widget.RelativeLayout;
 import android.widget.MediaController;
 
-public class SimpleAudioStream extends Activity implements
+public class AudioStream extends Activity implements
 		MediaPlayer.OnCompletionListener, MediaPlayer.OnPreparedListener,
 		MediaPlayer.OnErrorListener, MediaPlayer.OnBufferingUpdateListener,
 		MediaController.MediaPlayerControl {

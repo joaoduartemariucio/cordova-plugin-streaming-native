@@ -1,4 +1,4 @@
-package com.smccamley.cordova.plugins.streamingmedia;
+package br.com.joaoduartemariucio.cordova.plugins.streamingnative;
 
 import android.app.Activity;
 import android.graphics.Color;
@@ -48,10 +48,10 @@ public class StreamingMedia extends CordovaPlugin {
 	}
 
 	private boolean playAudio(String url, JSONObject options) {
-		return play(SimpleAudioStream.class, url, options);
+		return play(AudioStream.class, url, options);
 	}
 	private boolean playVideo(String url, JSONObject options) {
-		return play(SimpleVideoStream.class, url, options);
+		return play(VideoStream.class, url, options);
 	}
 
 	private boolean play(final Class activityClass, final String url, final JSONObject options) {
