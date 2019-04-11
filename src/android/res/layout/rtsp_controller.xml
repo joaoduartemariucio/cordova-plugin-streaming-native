@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:src="http://schemas.android.com/tools"
+    android:id="@+id/controler_view"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:animateLayoutChanges="true"
+    android:background="#99000000"
+    android:visibility="invisible"
+    src:visibility="visible"
+    >
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <ImageButton
+            android:id="@+id/rtsp_botao_voltar"
+            android:layout_width="50dp"
+            android:layout_height="wrap_content"
+            android:background="@android:color/transparent"
+            android:onClick="sair"
+            android:src="@drawable/ic_back"
+            android:paddingVertical="8dp"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentTop="true"/>
+
+        <TextView
+            android:id="@+id/rtsp_title_view"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentTop="true"
+            android:textAlignment="center"
+            android:layout_marginEnd="50dp"
+            android:paddingVertical="8dp"
+            android:textColor="@android:color/primary_text_dark"
+            src:text="Camera da Frente RTSP"
+            />
+
+    </LinearLayout>
+
+    <ImageView
+        android:id="@+id/rtsp_botao_pause"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:clickable="true"
+        android:contentDescription="Play"
+        android:focusable="true"
+        android:onClick="updatePlayPause"
+        android:paddingHorizontal="30dp"
+        android:paddingVertical="30dp"
+        android:src="@drawable/ic_item_pause"
+        android:visibility="gone"
+        src:visibility="visible" />
+
+</RelativeLayout>

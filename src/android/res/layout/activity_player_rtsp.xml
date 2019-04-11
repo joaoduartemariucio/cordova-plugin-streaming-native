@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:animateLayoutChanges="true"
+    >
+
+    <org.videolan.libvlc.media.VideoView
+        android:id="@+id/rtsp_video_view"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:onClick="onClick"/>
+
+    <ProgressBar
+        android:id="@+id/rtsp_progress_bar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:indeterminate="true"
+        android:layout_centerInParent="true"
+        />
+
+    <include layout="@layout/rtsp_controller" />
+
+</RelativeLayout>

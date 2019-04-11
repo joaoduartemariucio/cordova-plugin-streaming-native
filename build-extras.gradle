@@ -1,0 +1,9 @@
+android {
+    defaultConfig {
+    }
+
+   packagingOptions {
+       exclude 'META-INF/NOTICE'
+       exclude 'META-INF/LICENSE'
+   }
+}
