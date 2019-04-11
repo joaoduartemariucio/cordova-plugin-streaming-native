@@ -2,24 +2,24 @@
 <plugin
 		xmlns="http://apache.org/cordova/ns/plugins/1.1"
 		xmlns:android="http://schemas.android.com/apk/res/android"
-		id="cordova-plugin-streaming-native"
-		version="1.0.1">
+		id="cordova-plugin-player-rtsp"
+		version="1.0.0">
 
 	<name>StreamingMedia</name>
 
 	<description>
-		This plugin allows you to launch a fullscreen streaming player for audio or video on Android and iOS.
+		Reprodução de video com protocolos rtsp, hls e mp4.
 	</description>
 
-	<author>João Vitor Duarte Mariucio</author>
+	<author>FullArm Mobile</author>
 
 	<license>MIT</license>
 
 	<keywords>Streaming, Media, Video, Audio, Android, iOS</keywords>
 
-	<repo>https://github.com/joaoduartemariucio/cordova-plugin-streaming-native.git</repo>
+	<repo>http://joao.duarte@dev.ftdata.com.br:8084/r/~joao.duarte/cordova-plugin-player-rtsp.git</repo>
 
-	<issue>https://github.com/joaoduartemariucio/cordova-plugin-streaming-native/issues</issue>
+	<issue>http://joao.duarte@dev.ftdata.com.br:8084/r/~joao.duarte/cordova-plugin-player-rtsp/issues</issue>
 
 	<engines>
 		<engine name="cordova" version=">=3.0.0" />

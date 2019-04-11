@@ -1,20 +1,20 @@
 {
   "_args": [
     [
-      "cordova-plugin-streaming-native@^1.0.1",
+      "cordova-plugin-player-rtsp@^1.0.0",
       "/home/antonio/fullarmAppHibrido"
     ]
   ],
-  "_from": "cordova-plugin-streaming-native@>=1.0.1 <2.0.0",
+  "_from": "cordova-plugin-player-rtsp@>=1.0.0 <2.0.0",
   "_hasShrinkwrap": false,
-  "_id": "cordova-plugin-streaming-native@1.0.1",
+  "_id": "cordova-plugin-player-rtsp@1.0.0",
   "_inCache": true,
   "_installable": true,
-  "_location": "/cordova-plugin-streaming-native",
+  "_location": "/cordova-plugin-player-rtsp",
   "_nodeVersion": "8.12.0",
   "_npmOperationalInternal": {
     "host": "s3://npm-registry-packages",
-    "tmp": "tmp/cordova-plugin-streaming-native_1.0.1_1539812213499_0.26648200736257244"
+    "tmp": "tmp/cordova-plugin-player-rtsp_1.0.0_1539812213499_0.26648200736257244"
   },
   "_npmUser": {
     "email": "joaovitorduartemariucio@gmail.com",
@@ -23,26 +23,26 @@
   "_npmVersion": "6.4.1",
   "_phantomChildren": {},
   "_requested": {
-    "name": "cordova-plugin-streaming-native",
-    "raw": "cordova-plugin-streaming-native@^1.0.1",
-    "rawSpec": "^1.0.1",
+    "name": "cordova-plugin-player-rtsp",
+    "raw": "cordova-plugin-player-rtsp@^1.0.0",
+    "rawSpec": "^1.0.0",
     "scope": null,
-    "spec": ">=1.0.1 <2.0.0",
+    "spec": ">=1.0.0 <2.0.0",
     "type": "range"
   },
   "_requiredBy": [
     "/"
   ],
-  "_resolved": "https://registry.npmjs.org/cordova-plugin-streaming-native/-/cordova-plugin-streaming-native-1.0.1.tgz",
+  "_resolved": "https://registry.npmjs.org/cordova-plugin-player-rtsp/-/cordova-plugin-player-rtsp-1.0.0.tgz",
   "_shasum": "1e6d5b951a6538bcc2cc683581b90fc49cfabae0",
   "_shrinkwrap": null,
-  "_spec": "cordova-plugin-streaming-native@^1.0.1",
+  "_spec": "cordova-plugin-player-rtsp@^1.0.0",
   "_where": "/home/antonio/fullarmAppHibrido",
   "author": {
     "name": "João Vitor Duarte Mariucio"
   },
   "bugs": {
-    "url": "https://github.com/joaoduartemariucio/cordova-plugin-streaming-native/issues"
+    "url": "http://joao.duarte@dev.ftdata.com.br:8084/r/~joao.duarte/cordova-plugin-player-rtsp/issues"
   },
   "dependencies": {},
   "description": "This plugin allows you to stream audio and video in a fullscreen, native player on iOS and Android.",
@@ -53,11 +53,11 @@
     "integrity": "sha512-jOSwU/DyevHpDD0ONMMZwT2e2JfHvW/jd7z//FYuoUNq/FCPF/9udVu1QQvNaaE1qNf91IOM1iwGI2JdisVTWQ==",
     "npm-signature": "-----BEGIN PGP SIGNATURE-----\r\nVersion: OpenPGP.js v3.0.4\r\nComment: https://openpgpjs.org\r\n\r\nwsFcBAEBCAAQBQJbx6t2CRA9TVsSAnZWagAAG0kP/Aod8xwpMxZY6lK/j/BB\n+n97gD3kFglpcc9eRKcZxP5YCWlw92QOQH5jPrANdJjxVsYV7ryLjo1NNKDV\nAtSnpYyAxwR6z9cZTXTFA159grYQOKt2iNEqhIw6XbqJTiAeo0o7fmJBdMIk\n9T28oh0PXjQBH3eLBYRgmS/S2yzUoacuzW9098fOjUS8E2Vr/1EiTrF1Q9Zk\nap7RoL8lzWUjP51b+woZrnX0yULcDot4rkcSq+Xx1mWb8jfRptDZOzNDbj8s\n/g5N4lz0XfPxQCJ4YifJF+1vIOi7Eysme7llVqTHhbR2xEJR2tFmtHQZ8Gbp\nAKTlZjsOBDUz7FSjkFfNit9eYSWO04/1sRwG/gh9uqsdFo95OGvUxvHsL8Xm\n9kxtUGLo6rowi0IA3UjkTbq3mzLto9EXjoQaZOuJnL5T3qM+XZMToHxmO6ow\nVeGZ2oGJicT6OX+Ad9rvOtz4Xa+C7KN7zltF1DKqAqlP6FLlSgvc1ninES5o\nf39pCbqsQT+w7BQbGGXRwcWN5dPANexA0cXdm0Zm4EYMottonMfCGPPhEFUU\nEx4RytFJU05baOdAI0fuxN0CaXMDZcFZxdEZ/90EDyXzmOjzwSvCyDaUtqer\nm0Jpgo9L2iIOdO+oMCspN+eMRHsIuAz2e4Yt528LZ5RTmj78n/8otc43j+Pt\nUjTW\r\n=z+Pl\r\n-----END PGP SIGNATURE-----\r\n",
     "shasum": "1e6d5b951a6538bcc2cc683581b90fc49cfabae0",
-    "tarball": "https://registry.npmjs.org/cordova-plugin-streaming-native/-/cordova-plugin-streaming-native-1.0.1.tgz",
+    "tarball": "https://registry.npmjs.org/cordova-plugin-player-rtsp/-/cordova-plugin-player-rtsp-1.0.0.tgz",
     "unpackedSize": 33147
   },
   "gitHead": "32b093c9e85192917043133cd58968d221e30d61",
-  "homepage": "https://github.com/joaoduartemariucio/cordova-plugin-streaming-native#readme",
+  "homepage": "http://joao.duarte@dev.ftdata.com.br:8084/r/~joao.duarte/cordova-plugin-player-rtsp#readme",
   "keywords": [
     "media",
     "streaming",
@@ -74,15 +74,15 @@
       "name": "joaoduartemariucio"
     }
   ],
-  "name": "cordova-plugin-streaming-native",
+  "name": "cordova-plugin-player-rtsp",
   "optionalDependencies": {},
   "readme": "ERROR: No README data found!",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/joaoduartemariucio/cordova-plugin-streaming-native.git"
+    "url": "git+http://joao.duarte@dev.ftdata.com.br:8084/r/~joao.duarte/cordova-plugin-player-rtsp.git"
   },
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
-  "version": "1.0.1"
+  "version": "1.0.0"
 }
