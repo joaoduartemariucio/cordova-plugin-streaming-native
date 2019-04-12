@@ -51,10 +51,10 @@ public class StreamingMedia extends CordovaPlugin {
 		return play(AudioStream.class, url, options);
 	}
 	private boolean playVideo(String url, JSONObject options) {
-		if(url.contains("https")) {
-			return play(VideoStream.class, url, options);
-		}else{
+		if(url.contains("rtsp")) {
 			return play(PlayerRTSPActivity.class, url, options);
+		}else{
+			return play(VideoStream.class, url, options);
 		}
 	}
 

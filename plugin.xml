@@ -112,16 +112,61 @@
 				<param name="android-package" value="br.com.joaoduartemariucio.cordova.plugins.streamingnative.StreamingMedia" />
 			</feature>
 		</config-file>
+
+		<framework src="src/android/libvlc.gradle" custom="true" type="gradleReference" />
+        <resource-file src="libs/libvlc-all-3.1.8.aar" target="libs/libvlc.aar" />
+
 		<config-file target="AndroidManifest.xml" parent="/manifest">
 			<uses-permission android:name="android.permission.INTERNET" />
+			<uses-permission android:name="android.permission.WAKE_LOCK" />
 		</config-file>
+
 		<config-file target="AndroidManifest.xml" parent="/manifest/application">
 			<activity android:configChanges="orientation|screenSize" android:name="br.com.joaoduartemariucio.cordova.plugins.streamingnative.AudioStream" android:label="Audio Stream"></activity>
 			<activity android:configChanges="orientation|screenSize" android:name="br.com.joaoduartemariucio.cordova.plugins.streamingnative.VideoStream" android:label="Video Stream"></activity>
+			<activity android:configChanges="orientation|screenSize" android:name="br.com.joaoduartemariucio.cordova.plugins.streamingnative.PlayerRTSPActivity" android:label="RTSP Stream" android:theme="@android:style/Theme.Holo.NoActionBar"></activity>
 		</config-file>
+
 		<source-file src="src/android/br/com/joaoduartemariucio/cordova/plugins/streamingnative/AudioStream.java" target-dir="src/br/com/joaoduartemariucio/cordova/plugins/streamingnative" />
 		<source-file src="src/android/br/com/joaoduartemariucio/cordova/plugins/streamingnative/VideoStream.java" target-dir="src/br/com/joaoduartemariucio/cordova/plugins/streamingnative" />
 		<source-file src="src/android/br/com/joaoduartemariucio/cordova/plugins/streamingnative/StreamingMedia.java" target-dir="src/br/com/joaoduartemariucio/cordova/plugins/streamingnative" />
 		<source-file src="src/android/br/com/joaoduartemariucio/cordova/plugins/streamingnative/ImageLoadTask.java" target-dir="src/br/com/joaoduartemariucio/cordova/plugins/streamingnative" />
+		<source-file src="src/android/br/com/joaoduartemariucio/cordova/plugins/streamingnative/PlayerRTSPActivity.java" target-dir="src/br/com/joaoduartemariucio/cordova/plugins/streamingnative" />
+
+		<source-file src="src/android/res/drawable/ic_item_pause.xml" 			target-dir="res/drawable" />
+		<source-file src="src/android/res/drawable/ic_item_play.xml" 			target-dir="res/drawable" />
+
+		<source-file src="src/android/res/drawable-anydpi/ic_back.xml" 			target-dir="res/drawable-anydpi" />
+		<source-file src="src/android/res/drawable-anydpi/ic_pause_black.xml" 	target-dir="res/drawable-anydpi" />
+		<source-file src="src/android/res/drawable-anydpi/ic_pause.xml" 		target-dir="res/drawable-anydpi" />
+		<source-file src="src/android/res/drawable-anydpi/ic_play_black.xml" 	target-dir="res/drawable-anydpi" />
+		<source-file src="src/android/res/drawable-anydpi/ic_play.xml" 			target-dir="res/drawable-anydpi" />
+
+		<source-file src="src/android/res/drawable-hdpi/ic_back.png" 			target-dir="app/src/main/res/drawable-hdpi" />
+		<source-file src="src/android/res/drawable-hdpi/ic_pause_black.png" 	target-dir="app/src/main/res/drawable-hdpi" />
+		<source-file src="src/android/res/drawable-hdpi/ic_pause.png" 			target-dir="app/src/main/res/drawable-hdpi" />
+		<source-file src="src/android/res/drawable-hdpi/ic_play_black.png" 		target-dir="app/src/main/res/drawable-hdpi" />
+		<source-file src="src/android/res/drawable-hdpi/ic_play.png" 			target-dir="app/src/main/res/drawable-hdpi" />
+
+		<source-file src="src/android/res/drawable-mdpi/ic_back.png" 			target-dir="app/src/main/res/drawable-mdpi" />
+		<source-file src="src/android/res/drawable-mdpi/ic_pause_black.png" 	target-dir="app/src/main/res/drawable-mdpi" />
+		<source-file src="src/android/res/drawable-mdpi/ic_pause.png" 			target-dir="app/src/main/res/drawable-mdpi" />
+		<source-file src="src/android/res/drawable-mdpi/ic_play_black.png" 		target-dir="app/src/main/res/drawable-mdpi" />
+		<source-file src="src/android/res/drawable-mdpi/ic_play.png" 			target-dir="app/src/main/res/drawable-mdpi" />
+
+		<source-file src="src/android/res/drawable-xhdpi/ic_back.png" 			target-dir="app/src/main/res/drawable-xhdpi" />
+		<source-file src="src/android/res/drawable-xhdpi/ic_pause_black.png" 	target-dir="app/src/main/res/drawable-xhdpi" />
+		<source-file src="src/android/res/drawable-xhdpi/ic_pause.png" 			target-dir="app/src/main/res/drawable-xhdpi" />
+		<source-file src="src/android/res/drawable-xhdpi/ic_play_black.png" 	target-dir="app/src/main/res/drawable-xhdpi" />
+		<source-file src="src/android/res/drawable-xhdpi/ic_play.png" 			target-dir="app/src/main/res/drawable-xhdpi" />
+
+		<source-file src="src/android/res/drawable-xxhdpi/ic_back.png" 			target-dir="app/src/main/res//drawable-xxhdpi" />
+		<source-file src="src/android/res/drawable-xxhdpi/ic_pause_black.png" 	target-dir="app/src/main/res//drawable-xxhdpi" />
+		<source-file src="src/android/res/drawable-xxhdpi/ic_pause.png" 		target-dir="app/src/main/res//drawable-xxhdpi" />
+		<source-file src="src/android/res/drawable-xxhdpi/ic_play_black.png" 	target-dir="app/src/main/res//drawable-xxhdpi" />
+		<source-file src="src/android/res/drawable-xxhdpi/ic_play.png" 			target-dir="app/src/main/res//drawable-xxhdpi" />
+
+		<source-file src="src/android/res/layout/activity_player_rtsp.xml" 		target-dir="res/layout" />
+		<source-file src="src/android/res/layout/rtsp_controller.xml" 			target-dir="res/layout" />
 	</platform>
 </plugin>

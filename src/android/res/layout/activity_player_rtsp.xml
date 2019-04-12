@@ -12,6 +12,8 @@
         android:layout_height="match_parent"
         android:onClick="onClick"/>
 
+    <include layout="@layout/rtsp_controller" />
+
     <ProgressBar
         android:id="@+id/rtsp_progress_bar"
         android:layout_width="wrap_content"
@@ -19,7 +21,5 @@
         android:indeterminate="true"
         android:layout_centerInParent="true"
         />
-
-    <include layout="@layout/rtsp_controller" />
 
 </RelativeLayout>
