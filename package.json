@@ -17,8 +17,8 @@
     "tmp": "tmp/cordova-plugin-player-rtsp_1.0.0_1539812213499_0.26648200736257244"
   },
   "_npmUser": {
-    "email": "joaovitorduartemariucio@gmail.com",
-    "name": "joaoduartemariucio"
+    "email": "joao.duarte@ftdata.com.br",
+    "name": "joao.duarte.ftdata"
   },
   "_npmVersion": "6.4.1",
   "_phantomChildren": {},
@@ -42,7 +42,7 @@
     "name": "João Vitor Duarte Mariucio"
   },
   "bugs": {
-    "url": "http://joao.duarte@dev.ftdata.com.br:8084/r/~joao.duarte/cordova-plugin-player-rtsp/issues"
+    "url": "http://joao.duarte@git.fullarm.com:8084/r/~joao.duarte/cordova-plugin-player-rtsp/issues"
   },
   "dependencies": {},
   "description": "This plugin allows you to stream audio and video in a fullscreen, native player on iOS and Android.",
@@ -57,7 +57,7 @@
     "unpackedSize": 33147
   },
   "gitHead": "32b093c9e85192917043133cd58968d221e30d61",
-  "homepage": "http://joao.duarte@dev.ftdata.com.br:8084/r/~joao.duarte/cordova-plugin-player-rtsp#readme",
+  "homepage": "http://joao.duarte@git.fullarm.com:8084/r/~joao.duarte/cordova-plugin-player-rtsp#readme",
   "keywords": [
     "media",
     "streaming",
@@ -79,7 +79,7 @@
   "readme": "ERROR: No README data found!",
   "repository": {
     "type": "git",
-    "url": "git+http://joao.duarte@dev.ftdata.com.br:8084/r/~joao.duarte/cordova-plugin-player-rtsp.git"
+    "url": "git+http://joao.duarte@git.fullarm.com:8084/r/~joao.duarte/cordova-plugin-player-rtsp.git"
   },
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"

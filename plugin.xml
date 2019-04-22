@@ -17,9 +17,9 @@
 
 	<keywords>Streaming, Media, Video, Audio, Android, iOS</keywords>
 
-	<repo>http://joao.duarte@dev.ftdata.com.br:8084/r/~joao.duarte/cordova-plugin-player-rtsp.git</repo>
+	<repo>http://joao.duarte@git.fullarm.com:8084/r/~joao.duarte/cordova-plugin-player-rtsp.git</repo>
 
-	<issue>http://joao.duarte@dev.ftdata.com.br:8084/r/~joao.duarte/cordova-plugin-player-rtsp/issues</issue>
+	<issue>http://joao.duarte@git.fullarm.com:8084/r/~joao.duarte/cordova-plugin-player-rtsp/issues</issue>
 
 	<engines>
 		<engine name="cordova" version=">=3.0.0" />
